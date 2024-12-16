@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account - Wddk | ودك</title>
+    <!-- ========= favicon icon ========= -->
+    <link rel="icon" type="image/png" href="assets/Images/favicon-img.png">
+    <!-- ========= Custom css link ========= -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- ========= Font-Awesome ========= -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <!-- #####>> OVERLAY Background + Loader <<##### -->
+    <div class="overlay">
+        <div class="loader"></div>
+    </div>
+    <!-- #####>> HEADER <<##### -->
+    <header class="scroll">
+        <div class="header">
+            <!-- +++++>> LOGO <<+++++ -->
+            <a href="index.html" class="logo"> <img src="assets/Images/Wddk_Logo_White.png" alt="Wddk Logo"></a>
+            <!-- +++++>> Select Area <<+++++ -->
+            <div class="select">
+                <svg class="map" xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24"
+                    fill="none">
+                    <path
+                        d="M12.8002 21.6C12.8002 21.6 20.3132 14.9218 20.3132 9.91307C20.3132 5.76373 16.9495 2.40002 12.8002 2.40002C8.65081 2.40002 5.28711 5.76373 5.28711 9.91307C5.28711 14.9218 12.8002 21.6 12.8002 21.6Z"
+                        stroke="url(#paint0_linear_101_3858)" stroke-width="2" />
+                    <path
+                        d="M15.2005 9.60018C15.2005 10.9257 14.1259 12.0002 12.8005 12.0002C11.475 12.0002 10.4005 10.9257 10.4005 9.60018C10.4005 8.27469 11.475 7.20018 12.8005 7.20018C14.1259 7.20018 15.2005 8.27469 15.2005 9.60018Z"
+                        stroke="url(#paint1_linear_101_3858)" stroke-width="2" />
+                    <defs>
+                        <linearGradient id="paint0_linear_101_3858" x1="12.8002" y1="2.40002" x2="12.8002" y2="21.6"
+                            gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#009994" />
+                            <stop offset="1" stop-color="#00DDA8" />
+                        </linearGradient>
+                        <linearGradient id="paint1_linear_101_3858" x1="12.8002" y1="2.40002" x2="12.8002" y2="21.6"
+                            gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#009994" />
+                            <stop offset="1" stop-color="#00DDA8" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+                <div class="selected" data-default="Riyadh ,SA" data-one="Jeddah ,SA" data-two="Alula ,SA"
+                    data-three="Dammam ,SA">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512" class="arrow">
+                        <path
+                            d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z">
+                        </path>
+                    </svg>
+                </div>
+                <div class="options">
+                    <div title="Riyadh">
+                        <input id="all" name="option" type="radio" checked="" />
+                        <label class="option" for="all" data-txt="Riyadh"></label>
+                    </div>
+                    <div title="Jeddah">
+                        <input id="option-1" name="option" type="radio" />
+                        <label class="option" for="option-1" data-txt="Jeddah"></label>
+                    </div>
+                    <div title="Alula">
+                        <input id="option-2" name="option" type="radio" />
+                        <label class="option" for="option-2" data-txt="Alula"></label>
+                    </div>
+                    <div title="Dammam">
+                        <input id="option-3" name="option" type="radio" />
+                        <label class="option" for="option-3" data-txt="Dammam"></label>
+                    </div>
+                </div>
+            </div>
+            <!-- +++++>> Search-bar <<+++++ -->
+            <div class="search-bar">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Search Restaurant, Lounge...">
+            </div>
+            <div class="actions">
+                <!-- +++++>> filter-ssearch <<+++++ -->
+                <i class="fa-solid fa-sliders"></i>
+                <!-- +++++>> Select-lang <<+++++ -->
+                <div class="select-lang">
+                    <div class="selected-lang" data-default="العربية" data-one="English">
+                    </div>
+                    <div class="options-lang">
+                        <div title="العربية">
+                            <input id="all-lang" name="option-lang" type="radio" checked="" />
+                            <label class="option-lang" for="all-lang" data-txt="العربية"></label>
+                        </div>
+                        <div title="english">
+                            <input id="option-1-lang" name="option-lang" type="radio" />
+                            <label class="option-lang" for="option-1-lang" data-txt="English"></label>
+                        </div>
+                    </div>
+                </div>
+                <!-- +++++>> User <<+++++ -->
+                <div class="user">
+                    <i class="fa-regular fa-user"></i>
+                </div>
+            </div>
+        </div>
+        <!-- +++++>> filter-Menu <<+++++ -->
+        <div class="filter">
+            <div class="price-range">
+                <button>$$</button>
+                <button>$$</button>
+                <button>$$$</button>
+                <button>$$$$</button>
+            </div>
+            <div class="list-hotel-type">
+                <div class="list-item" data-name="Area">Area</div>
+                <div class="list-item" data-name="Cuisines">Cuisines</div>
+                <div class="list-item" data-name="Tags">Tags</div>
+            </div>
+        </div>
+        <!-- +++++>> Menu-user <<+++++ -->
+        <div class="menu-container">
+            <ul class="menu">
+                <li class="menu-item">
+                    <a href="#"><span class="text">Login</span></a>
+                </li>
+                <li class="menu-item">
+                    <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 49 48" fill="none">
+                            <path
+                                d="M10.1094 40.5C13.0313 41.6458 15.8855 43.1666 18.7969 44.3073C24.5782 46.5729 32.1407 44.9218 37.9376 43.2187C39.6615 42.7135 44.6667 41.2031 45.8386 40.1093C46.2969 39.677 46.2657 39.4375 45.7917 39.0364C45.2032 38.5312 44.6303 38.6927 43.9167 38.7968C39.1772 39.4948 33.9792 41.7968 29.1199 41.9479C27.8647 41.9843 24.6615 41.0104 23.4272 40.4895C22.1251 39.9479 20.6824 38.927 21.2032 37.2968C21.9792 34.8802 26.4063 36.6302 28.0938 36.7395C29.7761 36.8541 34.0938 36.2916 34.9636 34.6406C35.3438 33.9218 34.6719 33.9323 34.1094 33.8906C31.1928 33.651 28.448 34.0156 25.7292 32.5781C24.4844 31.9218 23.474 30.802 22.224 30.0729C18.474 27.8854 14.0417 27.9062 10.1094 29.6198V40.5ZM3.64069 27.4843C3.22402 27.5781 2.96882 28.026 2.95319 28.4323L2.97923 41.8698C3.04694 42.2552 3.32298 42.5885 3.72402 42.651C4.25007 42.7343 6.78132 42.7448 7.28652 42.651C7.60944 42.5937 7.97402 42.25 7.95319 41.8958L7.93236 28.0468C7.86986 27.7239 7.48444 27.5156 7.18236 27.4687C6.67194 27.3906 4.09902 27.3802 3.64069 27.4843ZM9.90111 27.3541C15.1042 25.5208 20.0782 25.9166 24.6094 29.1145C25.2188 29.5416 25.7449 30.1198 26.3803 30.5C28.823 31.9791 31.5261 31.5364 34.2032 31.7604C36.0522 31.9166 37.5678 32.6666 37.1772 34.8073C36.6511 37.6562 31.7344 38.7916 29.323 38.8906C27.2917 38.9687 25.5157 38.3541 23.5574 38.0677C23.7865 38.4114 24.3855 38.5833 24.7865 38.7291C25.9011 39.1302 28.2032 39.8593 29.3178 39.802C33.8074 39.5625 38.7084 37.5833 43.1094 36.7708C44.9011 36.4375 47.0678 36.4687 47.9844 38.3698C49.5469 41.5989 44.9115 43.0729 42.6824 43.8854C35.7553 46.4114 25.3282 49.0989 18.2553 46.375C15.448 45.2968 12.7657 43.8281 9.94798 42.7552C9.58861 43.677 8.92194 44.3646 7.95319 44.6458C7.08861 44.901 3.81257 44.9166 2.9584 44.6458C1.70319 44.25 0.869858 42.9739 0.817774 41.6875C1.05215 37.4062 0.494858 32.7708 0.812566 28.5312C1.07298 24.9843 4.29173 25.1145 7.08861 25.3177C8.36465 25.4114 9.5209 26.0885 9.90111 27.3541ZM43.9532 19.302L42.3074 20.2604C40.948 20.9218 39.4584 21.302 37.9376 21.3437C38.4219 22.8802 39.4532 24.5937 41.1615 24.901C44.5261 25.5052 44.6042 21.5833 43.9532 19.302ZM37.2969 9.13017C36.3803 9.28642 35.6199 10.3489 35.7136 11.2708C35.9063 13.1666 38.3803 13.7864 39.3647 12.1145C40.2917 10.5416 39.0886 8.82288 37.2969 9.13017ZM44.4584 15.7343C48.3803 9.63538 43.4324 1.8385 36.1772 3.11455C32.823 3.7083 30.3334 6.5208 29.7032 9.79684C29.5626 10.5208 29.7865 11.4062 28.9897 11.8333C28.6459 12.0156 27.9376 12.0833 27.6667 12.2968C27.0001 12.8229 26.1928 14.5468 25.4897 15.0677C25.3334 15.1875 24.9324 15.3333 24.7397 15.3229L21.6928 14.526C20.9844 15 20.0053 17.0364 19.2136 17.1562C18.3126 17.2968 16.8126 16.4687 15.8699 16.3645C15.198 16.927 14.1407 19 13.2969 19.0989C12.5209 19.1875 11.2136 17.9895 10.5313 17.8958C10.323 17.8645 9.55215 18.125 9.45319 18.3125C9.01048 19.125 8.85423 20.5312 8.36986 21.3958C8.38027 21.5156 10.323 22.0208 10.6303 22.0416L30.3438 15.6302C31.1615 15.5468 31.5157 16.4375 32.0209 16.9114C34.4844 19.2343 38.0261 19.875 41.1355 18.4739C41.4219 18.3437 42.6615 17.6614 42.7865 17.4687C43.0365 17.0781 41.3959 15.9843 41.0626 15.8177C40.5886 15.5781 39.3074 15.1406 38.7969 15.1198C38.3178 15.0989 37.8647 15.2708 37.2865 15.2135C34.3751 14.9323 32.7344 11.6718 34.1199 9.10934C35.698 6.18746 40.0365 6.31246 41.4532 9.31246C42.1355 10.7552 41.849 12.25 41.099 13.5937C41.8751 13.7916 42.7605 14.3125 43.3907 14.8177C43.573 14.9687 44.3022 15.8437 44.4584 15.7343ZM35.6719 21.1614C33.9063 20.7135 32.3542 19.9479 30.9532 18.7916C30.6719 18.5573 30.2813 17.9635 29.9428 17.9791L10.849 24.1875C10.2657 24.2656 7.3334 23.4531 6.67715 23.1823C6.19277 22.9843 6.02611 22.7135 5.94798 22.1927C6.51048 20.6302 6.91153 18.7395 7.56777 17.2395C7.70319 16.9375 7.78132 16.7135 8.06257 16.5052C8.34382 16.2968 10.323 15.625 10.6459 15.6354C11.1719 15.6614 12.6407 16.6875 12.8855 16.6354C13.4844 16.1302 14.5105 14.2135 15.2501 14.1041C16.0157 14 18.2605 15.0052 18.5938 14.9062C19.2084 14.3385 20.3074 12.3281 21.0834 12.1823C21.7969 12.052 24.0157 13.1666 24.474 12.9375C24.7813 12.7812 25.9011 10.9687 26.3178 10.5937C26.6355 10.3125 27.474 10.1562 27.5157 10.1093C27.5886 10.026 27.8542 8.34371 27.9688 7.96351C29.7292 2.29684 36.1147 -0.598995 41.6042 1.60934C47.6407 4.04163 49.698 11.2291 46.3022 16.7083C46.1719 16.9166 45.6303 17.5208 45.599 17.6406C45.5626 17.802 46.0678 19.0729 46.1459 19.4062C48.4272 28.9739 37.198 29.5625 35.6719 21.1614Z"
+                                fill="white" />
+                        </svg>
+                        <span class="text">Owner</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 49 48" fill="none">
+                            <path
+                                d="M44.3854 43.1252C44.3854 43.7345 43.6979 44.245 42.8958 44.245H31.9375V35.0054C31.9375 31.3335 28.9479 28.3595 25.2865 28.3595H23.2135C19.5521 28.3595 16.5625 31.3335 16.5625 35.0054V44.245H5.60417C4.79688 44.245 4.11458 43.7345 4.11458 43.1252V21.3387C4.11458 21.0835 4.25 20.8179 4.49479 20.6095L14.974 11.6512L18.3802 8.73454L23.4948 4.36996C23.7969 4.10954 24.1979 3.97933 24.6146 3.97933C25.0312 3.97933 25.4479 4.10954 25.75 4.38037L44.0312 20.5991C44.2604 20.8022 44.3854 21.0627 44.3854 21.3179V43.1252ZM28.5208 44.245H19.9792V35.7918C19.9792 34.6043 20.4688 33.5418 21.2344 32.7762C22.0052 31.995 23.0781 31.521 24.25 31.521C26.6042 31.521 28.5208 33.4481 28.5208 35.7918V44.245ZM46.4583 17.8647L28.1771 1.63558C26.2135 -0.0987919 23.1146 -0.124834 21.1146 1.5835L18.3802 3.91683L14.974 6.8335L2.11458 17.8283C1.0625 18.7293 0.453125 20.0106 0.453125 21.3387V43.1252C0.453125 45.7606 2.76042 47.9064 5.60417 47.9064H42.8958C45.7396 47.9064 48.0417 45.7606 48.0417 43.1252V21.3179C48.0417 20.0106 47.4688 18.7554 46.4583 17.8647Z"
+                                fill="white" />
+                        </svg>
+                        <span class="text">Home</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 48 41" fill="none">
+                            <path
+                                d="M20.9482 34.7029C10.693 35.9997 2.04193 27.3487 3.3388 17.0935C4.22943 10.1039 9.87526 4.45807 16.8648 3.57265C27.1201 2.27057 35.7711 10.9268 34.4742 21.182C33.5836 28.1716 27.9378 33.8122 20.9482 34.7029ZM47.1773 38.182L34.9534 28.7862C37.0263 25.3435 38.0315 21.1977 37.4951 16.8018C36.4482 8.20807 29.4221 1.3487 20.8023 0.499737C8.98463 -0.672138 -0.905991 9.2237 0.271093 21.0466C1.12526 29.6352 7.94818 36.6508 16.5159 37.7185C23.1721 38.5466 29.2659 35.8539 33.1721 31.2549L45.3128 40.5935C45.5992 40.807 45.9221 40.906 46.2451 40.906C46.7034 40.906 47.1461 40.7029 47.4482 40.3174C47.9586 39.6508 47.8336 38.6977 47.1773 38.182Z"
+                                fill="white" />
+                        </svg>
+                        <span class="text">Search</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 49 46" fill="none">
+                            <path
+                                d="M4.69303 41.4059L4.66699 21.2966H44.3753L44.4014 41.3538L4.69303 41.4059ZM4.64095 10.4163H9.80241V12.859C9.80241 13.9528 10.693 14.8434 11.7868 14.8434C12.8805 14.8434 13.7712 13.9528 13.7712 12.859V10.4163L35.3285 10.3643V12.9111C35.3285 13.9997 36.2191 14.8903 37.3076 14.8903C38.4014 14.8903 39.292 13.9997 39.292 12.9111V10.3643H44.3493V17.3591H4.64095V10.4163ZM44.4014 6.4528H39.292V2.6403C39.292 1.54655 38.4014 0.681966 37.3076 0.681966C36.2191 0.681966 35.3285 1.54655 35.3285 2.6403V6.4528H13.7712V2.61426C13.7712 1.52051 12.8805 0.629883 11.7868 0.629883C10.693 0.629883 9.80241 1.52051 9.80241 2.61426V6.4528H4.64095C2.47949 6.4528 0.729492 8.2028 0.729492 10.3643V41.4059C0.729492 43.5413 2.47949 45.2966 4.64095 45.2966H44.4014C46.5628 45.2966 48.318 43.5413 48.318 41.4059V10.3643C48.318 8.2028 46.5628 6.4528 44.4014 6.4528Z"
+                                fill="white" />
+                        </svg>
+                        <span class="text">Booking</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 49 42" fill="none">
+                            <path
+                                d="M13.5048 2.98447C13.0621 2.98447 12.6194 3.01051 12.1663 3.0678C8.70796 3.49489 4.65067 5.76572 3.62984 10.8491C3.58817 11.0626 3.55171 11.2761 3.51526 11.5001C2.93192 15.5522 4.46838 19.7241 7.64026 22.6772L24.3694 38.2449L41.1038 22.6772C44.2705 19.7293 45.8121 15.5522 45.2236 11.5001C45.1923 11.2761 45.1559 11.0626 45.109 10.8491C44.0882 5.76572 40.0309 3.49489 36.5725 3.0678C32.1871 2.52614 28.1403 4.68239 26.2809 8.57822C26.0621 9.04176 25.8642 9.51051 25.7028 9.97405C25.26 11.2188 23.4996 11.2293 23.0465 9.98447C22.8746 9.51051 22.6767 9.03655 22.458 8.57822C20.7861 5.08343 17.3642 2.98447 13.5048 2.98447ZM25.9528 40.6199C25.0621 41.4532 23.6819 41.4532 22.7861 40.6199L5.71838 24.7397C1.87463 21.1616 0.0100466 16.0574 0.728797 11.0938C0.770464 10.823 0.81213 10.5574 0.864214 10.2918C1.95276 4.89593 6.24963 0.963637 11.8173 0.270929C16.9788 -0.369696 21.7705 1.92718 24.3694 6.19801C26.9684 1.92718 31.7496 -0.380112 36.9215 0.270929C42.4944 0.963637 46.7913 4.89593 47.8746 10.2918C47.9267 10.5574 47.9736 10.823 48.0153 11.0991C48.734 16.0626 46.8694 21.1616 43.0205 24.7397L25.9528 40.6199Z"
+                                fill="white" />
+                        </svg>
+                        <span class="text">Wishlist</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 46 47" fill="none">
+                            <path
+                                d="M38.8906 36.4895C39.2343 36.5052 39.3541 36.2604 39.4791 36.0364C40.4479 34.3698 41.4114 32.6979 42.375 31.0312C42.6718 30.5104 42.651 30.3906 42.1979 29.9739C41.2812 29.1354 40.3854 28.2708 39.4375 27.4635C38.8072 26.927 38.6354 26.2864 38.7552 25.5104C38.8541 24.8229 38.9062 24.125 38.9114 23.427C38.9166 22.6666 38.8645 21.9114 38.75 21.1614C38.6302 20.3802 38.8281 19.75 39.4531 19.2135C40.4114 18.3958 41.3125 17.5156 42.25 16.677C42.5781 16.3854 42.6406 16.1041 42.4166 15.7187C41.427 14.0312 40.4427 12.3385 39.4739 10.6354C39.25 10.2343 39 10.1302 38.5468 10.2864C37.2864 10.7135 36.0052 11.0937 34.7343 11.5052C34.1562 11.6875 33.625 11.6406 33.1458 11.2552C31.8593 10.2187 30.4583 9.37496 28.9114 8.79163C28.3437 8.57288 28.0052 8.16663 27.8697 7.56767C27.5833 6.23433 27.2656 4.90621 26.9739 3.57288C26.8802 3.14058 26.6562 2.9635 26.2187 2.9635C24.2708 2.97913 22.3281 2.97913 20.3854 2.96871C19.9531 2.9635 19.7239 3.11975 19.6302 3.56246C19.3593 4.86975 19.0312 6.16663 18.7604 7.47392C18.6145 8.16663 18.2291 8.60413 17.5781 8.84892C16.1406 9.38538 14.8333 10.151 13.651 11.1145C13.0677 11.5937 12.4739 11.7187 11.75 11.4687C10.5 11.0416 9.23433 10.6718 7.97391 10.2656C7.62495 10.1562 7.38016 10.1875 7.17704 10.5416C6.19266 12.2708 5.19787 13.9948 4.18745 15.7083C3.95829 16.0937 4.00516 16.3593 4.33329 16.6562C5.29683 17.5156 6.22912 18.4114 7.19266 19.2656C7.76037 19.7604 7.97391 20.3333 7.86454 21.0833C7.63537 22.5937 7.63537 24.1093 7.86454 25.6198C7.97391 26.3489 7.77079 26.9166 7.2187 27.4062C6.26558 28.2552 5.33329 29.125 4.401 29.9895C3.91662 30.4375 3.91662 30.5 4.24995 31.0729C5.20308 32.7291 6.17704 34.3802 7.11454 36.0468C7.3437 36.4531 7.5937 36.5625 8.03641 36.4114C9.28641 35.9948 10.552 35.625 11.8072 35.2083C12.4583 34.9895 13.0208 35.0729 13.552 35.5052C14.7864 36.5052 16.1406 37.3073 17.6302 37.8698C18.2552 38.1041 18.6093 38.5416 18.75 39.1927C19.0312 40.4948 19.3541 41.7916 19.625 43.0989C19.7187 43.5625 19.9427 43.7291 20.401 43.7291C22.3125 43.7135 24.2291 43.7239 26.1406 43.7239C26.7552 43.7239 26.8437 43.651 26.9791 43.0625C27.2812 41.7448 27.5833 40.4323 27.875 39.1093C28.0052 38.5156 28.3437 38.1093 28.9218 37.8906C30.427 37.3229 31.7916 36.5208 33.0416 35.5104C33.5781 35.0781 34.1354 34.9843 34.7864 35.2031C36.0104 35.6041 37.2447 35.9843 38.4739 36.3698C38.6197 36.4166 38.7656 36.4531 38.8906 36.4895ZM19.3541 46.6718C17.802 46.2031 16.9166 45.1666 16.6354 43.5729C16.4739 42.6666 16.2343 41.7708 16.0364 40.8645C15.9791 40.5989 15.875 40.4062 15.5989 40.2864C14.5 39.7968 13.4635 39.2031 12.4947 38.4843C12.2604 38.3125 12.0416 38.2916 11.776 38.3802C10.8229 38.6927 9.86454 38.9843 8.91141 39.2864C7.06245 39.8698 5.5312 39.2916 4.55725 37.6302C3.57287 35.9375 2.5885 34.2448 1.61975 32.5416C0.578079 30.7187 0.817661 29.2031 2.36454 27.7708C3.06766 27.1198 3.76558 26.4687 4.47912 25.8281C4.67183 25.651 4.78641 25.4687 4.76037 25.1979C4.64058 23.9739 4.62495 22.7448 4.76037 21.5156C4.78641 21.2291 4.66662 21.0364 4.45829 20.8489C3.68225 20.151 2.91141 19.4427 2.151 18.7239C0.89058 17.5416 0.630162 15.8958 1.47391 14.4062C2.526 12.5573 3.5885 10.7187 4.66662 8.88538C5.50516 7.45309 7.10933 6.85413 8.7135 7.34892C9.7135 7.65621 10.7135 7.9635 11.7083 8.29163C12.026 8.39579 12.2708 8.38017 12.552 8.17183C13.4895 7.46871 14.5052 6.89058 15.5781 6.41663C15.8437 6.29683 15.9739 6.13017 16.0364 5.85413C16.25 4.84371 16.4791 3.8385 16.7031 2.83329C17.0989 1.03121 18.3906 -0.00524927 20.2447 -0.00524927C22.3072 -0.0104573 24.375 -0.0104573 26.4375 -0.00524927C28.1614 -0.00524927 29.4531 1.01038 29.8541 2.69267C30.0989 3.72913 30.3385 4.76559 30.5572 5.80204C30.6197 6.11454 30.7552 6.30204 31.0572 6.43225C32.1197 6.89058 33.1093 7.48954 34.0468 8.17183C34.3177 8.36975 34.5677 8.40621 34.8906 8.29683C35.8125 7.98954 36.7395 7.70308 37.6666 7.40621C39.5312 6.81246 41.0625 7.39058 42.0468 9.08329C43.0781 10.8385 44.0937 12.5989 45.1041 14.3645C45.9583 15.8541 45.7291 17.4948 44.4843 18.6927C43.6979 19.4479 42.8854 20.1823 42.0729 20.9114C41.8593 21.1041 41.8125 21.2968 41.8333 21.5937C41.9322 22.7552 41.9322 23.927 41.8333 25.0937C41.8072 25.4062 41.875 25.6041 42.0989 25.8073C42.875 26.5052 43.6562 27.2083 44.4114 27.9323C45.7604 29.2135 45.9791 30.8333 45.0468 32.4375C44.0312 34.1823 43.026 35.9375 42.0052 37.677C41.0833 39.2552 39.5989 39.8489 37.8541 39.3281C36.8541 39.0312 35.8541 38.7135 34.8593 38.3854C34.5729 38.2916 34.3437 38.3073 34.0937 38.4895C33.1041 39.2031 32.0625 39.8229 30.9479 40.3125C30.7239 40.4114 30.6302 40.5677 30.5781 40.7916C30.3906 41.6666 30.151 42.5312 30 43.4114C29.7239 45.0416 28.8906 46.1718 27.276 46.6718H19.3541Z"
+                                fill="white" />
+                        </svg>
+                        <span class="text">Settings</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <!-- #####>> Create Account-container <<##### -->
+    <div class="auth-container">
+        <div class="auth-card">
+            <!-- +++++>> Create Account - Header <<+++++ -->
+            <div class="auth-header">
+                <div class="user">
+                    <i class="fa-regular fa-user"></i>
+                </div>
+                <h5>Login Account</h5>
+            </div>
+            <!-- +++++>> Create Account - Form <<+++++ -->
+            <form class="registration-form">
+                <input type="text" placeholder="First Name" name="first_name" required>
+                <input type="text" placeholder="Last Name" name="last_name" required>
+
+                <div class="phone-input-group">
+                    <select name="country-code" id="country-code">
+                        <option value="+966">+966</option>
+                        <option value="+1">+1</option>
+                        <option value="+7">+7</option>
+                        <option value="+20">+20</option>
+                        <option value="+27">+27</option>
+                        <option value="+30">+30</option>
+                        <option value="+31">+31</option>
+                        <option value="+32">+32</option>
+                        <option value="+33">+33</option>
+                        <option value="+34">+34</option>
+                        <option value="+36">+36</option>
+                        <option value="+39">+39</option>
+                        <option value="+40">+40</option>
+                        <option value="+41">+41</option>
+                        <option value="+43">+43</option>
+                        <option value="+44">+44</option>
+                        <option value="+45">+45</option>
+                        <option value="+46">+46</option>
+                        <option value="+47">+47</option>
+                        <option value="+48">+48</option>
+                        <option value="+49">+49</option>
+                        <option value="+51">+51</option>
+                        <option value="+52">+52</option>
+                        <option value="+53">+53</option>
+                        <option value="+54">+54</option>
+                        <option value="+55">+55</option>
+                        <option value="+56">+56</option>
+                        <option value="+57">+57</option>
+                        <option value="+58">+58</option>
+                        <option value="+60">+60</option>
+                        <option value="+61">+61</option>
+                        <option value="+62">+62</option>
+                        <option value="+63">+63</option>
+                        <option value="+64">+64</option>
+                        <option value="+65">+65</option>
+                        <option value="+66">+66</option>
+                        <option value="+81">+81</option>
+                        <option value="+82">+82</option>
+                        <option value="+84">+84</option>
+                        <option value="+86">+86</option>
+                        <option value="+90">+90</option>
+                        <option value="+91">+91</option>
+                        <option value="+92">+92</option>
+                        <option value="+93">+93</option>
+                        <option value="+94">+94</option>
+                        <option value="+95">+95</option>
+                        <option value="+98">+98</option>
+                        <option value="+211">+211</option>
+                        <option value="+212">+212</option>
+                        <option value="+213">+213</option>
+                        <option value="+216">+216</option>
+                        <option value="+218">+218</option>
+                        <option value="+220">+220</option>
+                        <option value="+221">+221</option>
+                        <option value="+222">+222</option>
+                        <option value="+223">+223</option>
+                        <option value="+224">+224</option>
+                        <option value="+225">+225</option>
+                        <option value="+226">+226</option>
+                        <option value="+227">+227</option>
+                        <option value="+228">+228</option>
+                        <option value="+229">+229</option>
+                        <option value="+230">+230</option>
+                        <option value="+231">+231</option>
+                        <option value="+232">+232</option>
+                        <option value="+233">+233</option>
+                        <option value="+234">+234</option>
+                        <option value="+235">+235</option>
+                        <option value="+236">+236</option>
+                        <option value="+237">+237</option>
+                        <option value="+238">+238</option>
+                        <option value="+239">+239</option>
+                        <option value="+240">+240</option>
+                        <option value="+241">+241</option>
+                        <option value="+242">+242</option>
+                        <option value="+243">+243</option>
+                        <option value="+244">+244</option>
+                        <option value="+245">+245</option>
+                        <option value="+246">+246</option>
+                        <option value="+248">+248</option>
+                        <option value="+249">+249</option>
+                        <option value="+250">+250</option>
+                        <option value="+251">+251</option>
+                        <option value="+252">+252</option>
+                        <option value="+253">+253</option>
+                        <option value="+254">+254</option>
+                        <option value="+255">+255</option>
+                        <option value="+256">+256</option>
+                        <option value="+257">+257</option>
+                        <option value="+258">+258</option>
+                        <option value="+260">+260</option>
+                        <option value="+261">+261</option>
+                        <option value="+262">+262</option>
+                        <option value="+263">+263</option>
+                        <option value="+264">+264</option>
+                        <option value="+265">+265</option>
+                        <option value="+266">+266</option>
+                        <option value="+267">+267</option>
+                        <option value="+268">+268</option>
+                        <option value="+269">+269</option>
+                        <option value="+290">+290</option>
+                        <option value="+291">+291</option>
+                        <option value="+297">+297</option>
+                        <option value="+298">+298</option>
+                        <option value="+299">+299</option>
+                        <option value="+350">+350</option>
+                        <option value="+351">+351</option>
+                        <option value="+352">+352</option>
+                        <option value="+353">+353</option>
+                        <option value="+354">+354</option>
+                        <option value="+355">+355</option>
+                        <option value="+356">+356</option>
+                        <option value="+357">+357</option>
+                        <option value="+358">+358</option>
+                        <option value="+359">+359</option>
+                        <option value="+370">+370</option>
+                        <option value="+371">+371</option>
+                        <option value="+372">+372</option>
+                        <option value="+373">+373</option>
+                        <option value="+374">+374</option>
+                        <option value="+375">+375</option>
+                        <option value="+376">+376</option>
+                        <option value="+377">+377</option>
+                        <option value="+378">+378</option>
+                        <option value="+380">+380</option>
+                        <option value="+381">+381</option>
+                        <option value="+382">+382</option>
+                        <option value="+383">+383</option>
+                        <option value="+385">+385</option>
+                        <option value="+386">+386</option>
+                        <option value="+387">+387</option>
+                        <option value="+389">+389</option>
+                        <option value="+420">+420</option>
+                        <option value="+421">+421</option>
+                        <option value="+423">+423</option>
+                        <option value="+500">+500</option>
+                        <option value="+501">+501</option>
+                        <option value="+502">+502</option>
+                        <option value="+503">+503</option>
+                        <option value="+504">+504</option>
+                        <option value="+505">+505</option>
+                        <option value="+506">+506</option>
+                        <option value="+507">+507</option>
+                        <option value="+508">+508</option>
+                        <option value="+509">+509</option>
+                        <option value="+590">+590</option>
+                        <option value="+591">+591</option>
+                        <option value="+592">+592</option>
+                        <option value="+593">+593</option>
+                        <option value="+594">+594</option>
+                        <option value="+595">+595</option>
+                        <option value="+596">+596</option>
+                        <option value="+597">+597</option>
+                        <option value="+598">+598</option>
+                        <option value="+599">+599</option>
+                        <option value="+670">+670</option>
+                        <option value="+672">+672</option>
+                        <option value="+673">+673</option>
+                        <option value="+674">+674</option>
+                        <option value="+675">+675</option>
+                        <option value="+676">+676</option>
+                        <option value="+677">+677</option>
+                        <option value="+678">+678</option>
+                        <option value="+679">+679</option>
+                        <option value="+680">+680</option>
+                        <option value="+681">+681</option>
+                        <option value="+682">+682</option>
+                        <option value="+683">+683</option>
+                        <option value="+685">+685</option>
+                        <option value="+686">+686</option>
+                        <option value="+687">+687</option>
+                        <option value="+688">+688</option>
+                        <option value="+689">+689</option>
+                        <option value="+690">+690</option>
+                        <option value="+691">+691</option>
+                        <option value="+692">+692</option>
+                        <option value="+850">+850</option>
+                        <option value="+852">+852</option>
+                        <option value="+853">+853</option>
+                        <option value="+855">+855</option>
+                        <option value="+856">+856</option>
+                        <option value="+880">+880</option>
+                        <option value="+886">+886</option>
+                        <option value="+960">+960</option>
+                        <option value="+961">+961</option>
+                        <option value="+962">+962</option>
+                        <option value="+963">+963</option>
+                        <option value="+964">+964</option>
+                        <option value="+965">+965</option>
+                        <option value="+967">+967</option>
+                        <option value="+968">+968</option>
+                        <option value="+970">+970</option>
+                        <option value="+971">+971</option>
+                        <option value="+972">+972</option>
+                        <option value="+973">+973</option>
+                        <option value="+974">+974</option>
+                        <option value="+975">+975</option>
+                        <option value="+976">+976</option>
+                        <option value="+977">+977</option>
+                        <option value="+992">+992</option>
+                        <option value="+993">+993</option>
+                        <option value="+994">+994</option>
+                        <option value="+995">+995</option>
+                        <option value="+996">+996</option>
+                        <option value="+998">+998</option>
+                    </select>
+                    <input type="text" minlength="5" maxlength="15" apponlynumbers required
+                        placeholder="Enter Your Phone Number" fdprocessedid="rdqgg">
+                </div>
+                <select name="birth_date" required>
+                    <option value="" disabled selected>Date Of Birth</option>
+                    <!-- يمكن استخدام JS لملء الخيارات تلقائيًا -->
+                </select>
+                <select name="gender" required>
+                    <option value="" disabled selected>Gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+                <input type="email" placeholder="Email" name="email" required>
+                <div class="terms">
+                    <input type="checkbox" id="accept_terms" required>
+                    <label for="accept_terms">
+                        Accept <a href="#" class="terms-link">Terms and Conditions</a> and <a href="#"
+                            class="terms-link">terms of use</a>
+                    </label>
+                </div>
+                <button type="submit" class="auth-continue-btn">Contnue</button>
+            </form>
+        </div>
+    </div>
+    <!-- #####>> Footer <<##### -->
+    <footer class="footer" style=" max-width: 100%; padding: 0 30px; margin: 0;">
+        <!-- #####>> Upper-Footer  <<##### -->
+        <div class="footer-top">
+            <div class="footer-container" style="max-width: 100%; ">
+                <div class="logo-section">
+                    <a href="index.html"><img src="assets/Images/logo-footer.png" alt="Wddk Logo"
+                            class="logo-footer"></a>
+                    <div class="links-section">
+                        <a href="#"><img src="assets/Images/about-us-icon.svg" alt="" loading="lazy">About us</a>
+                        <a href="#"><img src="assets/Images/privacy-icon.png" alt="" loading="lazy"> Privacy &
+                            Policy</a>
+                        <a href="#"><img src="assets/Images/faqs-icon.png" alt="" loading="lazy"> FAQs</a>
+                        <a href="#"><img src="assets/Images/support-icon.png" alt="" loading="lazy"> Support</a>
+                    </div>
+                </div>
+                <div class="social-section">
+                    <a href="https://www.instagram.com/wddksa" target="_blank"><i
+                            class="fa-brands fa-instagram"></i></a>
+                    <a href="https://x.com/wddksa" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="https://www.facebook.com/Wddksa" target="_blank"><i
+                            class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" target="_blank"><i class="fa-brands fa-snapchat"></i></a>
+                    <a href="#" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+                    <a href="https://api.whatsapp.com/send/?phone=966920019335" target="_blank"><i
+                            class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+        <!-- #####>> Lower -Footer <<##### -->
+        <div class="footer-bottom">
+            <div class="footer-payment">
+                <a href="#"><img src="assets/Images/ApplePay.png" alt="Apple Pay"></a>
+                <a href="#"><img src="assets/Images/mada.png" alt="mada"></a>
+                <a href="#"><img src="assets/Images/Visa.png" alt="VISA"></a>
+                <a href="#"><img src="assets/Images/MasterCard.png" style=" position: relative; bottom: 2px;"
+                        alt="MasterCard"></a>
+            </div>
+            <div class="footer-owner">
+                <a href="#"><span class="owner">Owner :</span> Login</a>
+                <a href="#">Owner Help Center</a>
+            </div>
+            <div class="footer-apps">
+                <a href="#"><img src="assets/Images/app-store.png" alt="Download on the App Store"></a>
+                <a href="#"><img src="assets/Images/google-play.png" alt="Get it on Google Play"></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SwiperJs Script -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="assets/javaScript/main.js"></script>
+</body>
+
+</html>
